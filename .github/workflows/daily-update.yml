@@ -1,0 +1,43 @@
+name: Daily report update
+
+# 매일 오전 8시(한국시간)에 실행.
+# GitHub Actions cron은 UTC 기준이라 23:00 UTC = 익일 08:00 KST.
+on:
+  schedule:
+    - cron: "0 23 * * *"
+  workflow_dispatch: {}   # GitHub 화면에서 수동 실행(테스트)용
+
+permissions:
+  contents: write          # index.html 커밋/푸시 권한
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate report
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          # 모델을 바꾸고 싶으면 저장소 Variables 에 GROQ_MODEL 추가
+          GROQ_MODEL: ${{ vars.GROQ_MODEL || 'llama-3.3-70b-versatile' }}
+        run: python generate_report.py
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain index.html)" ]; then
+            git add index.html
+            git commit -m "chore: 자동 뉴스 갱신 ($(TZ='Asia/Seoul' date '+%Y-%m-%d'))"
+            git push
+            echo "변경사항 푸시 완료"
+          else
+            echo "변경사항 없음 — 푸시 생략"
+          fi
