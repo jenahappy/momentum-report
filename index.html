@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>6개월 모멘텀 집중 포트폴리오 보고서 (2026-06-02)</title>
+<style>
+  :root{--bg:#0f1419;--card:#1a2027;--line:#2c353f;--txt:#e6e9ed;--mut:#9aa6b2;--accent:#4da3ff;--green:#34c759;--red:#ff5b5b;--amber:#ffb020;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--txt);font-family:"Segoe UI","Malgun Gothic",sans-serif;line-height:1.65;}
+  .wrap{max-width:1080px;margin:0 auto;padding:32px 22px 80px;}
+  h1{font-size:28px;margin:0 0 6px;letter-spacing:-.5px;}
+  h2{font-size:21px;margin:42px 0 14px;padding-bottom:8px;border-bottom:2px solid var(--accent);}
+  h3{font-size:17px;margin:26px 0 10px;color:var(--accent);}
+  .sub{color:var(--mut);font-size:14px;margin-bottom:24px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:16px 0;}
+  .warn{border-left:4px solid var(--amber);background:#241f15;}
+  .disc{border-left:4px solid var(--red);background:#241616;font-size:13.5px;}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px;}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;}
+  th{background:#222b34;color:#cfe1f2;font-weight:600;}
+  tr:nth-child(even) td{background:#161c22;}
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .src{font-size:11.5px;color:var(--mut);}
+  .tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:20px;margin:1px 2px;font-weight:600;}
+  .t-fund{background:#16361f;color:#7be59b;}
+  .t-hype{background:#3a2a12;color:#ffce85;}
+  .t-pre{background:#2a2330;color:#d6a8ff;}
+  .buy{color:var(--green);font-weight:700;}
+  .hold{color:var(--amber);font-weight:700;}
+  .watch{color:var(--mut);font-weight:700;}
+  .pos{color:var(--green);}
+  .neg{color:var(--red);}
+  .big{font-size:15px;}
+  ul{margin:8px 0 8px 0;padding-left:20px;}
+  li{margin:4px 0;}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media(max-width:720px){.grid{grid-template-columns:1fr;}}
+  .num{font-variant-numeric:tabular-nums;}
+  .foot{margin-top:50px;font-size:12px;color:var(--mut);border-top:1px solid var(--line);padding-top:18px;}
+  code{background:#0b0e12;padding:1px 6px;border-radius:5px;color:#ffce85;font-size:12.5px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>6개월 모멘텀 집중 포트폴리오 보고서</h1>
+<div class="sub">분석 기준일 2026-06-02 · 투자기간 6개월 · 성향: 상승 탄력(모멘텀) 우선 + 하방 통제 · 깔때기 방식(6테마 → 5종목)</div>
+
+<div class="card disc">
+<b>⚠️ 투자 유의 (서두 고지)</b><br>
+본 보고서는 <b>투자 참고용 분석</b>이며, 제시된 수치·목표가·확률·기대수익은 공개 검색 자료와 증권사 컨센서스를 종합한 <b>추정치</b>입니다. 단정적 수익을 약속하지 않으며, 일부 실시간 시세는 검색 시점·매체에 따라 편차가 있어 <b>매매 직전 증권사 HTS/MTS에서 재확인</b>이 필요합니다. 최종 판단과 책임은 투자자 본인에게 있습니다.
+</div>
+
+<!-- ============ MACRO ============ -->
+<h2>0. 시장 국면 진단 — "이례적 과열" 경고가 모든 판단의 전제</h2>
+<div class="card warn">
+<b>코스피, 연초 4,309 → 5월 15일 장중 8,000 (+약 90% YTD) 돌파 직후 6% 급락.</b> 7,000→8,000 도달에 단 8거래일이 걸렸고, 'AI 국민배당금' 정책 발언과 금리·환율 부담이 겹치며 급반락해 7,000선 초반까지 밀렸습니다.
+<span class="src">출처: <a href="https://www.mt.co.kr/amp/stock/2026/05/15/2026051511060599435">머니투데이</a>, <a href="https://www.khan.co.kr/en/article/202605121716017/">경향신문</a>, <a href="https://kr.investing.com/analysis/article-200457283">Investing.com</a></span>
+<ul>
+<li><b>함의 1 (모멘텀):</b> 주도주(반도체·전력기기 대형주) 추세는 유효하다는 게 증권가 다수 의견. 유안타증권 하반기 밴드 <b>7,600~10,000</b>. <span class="src"><a href="https://v.daum.net/v/20260521060107274">다음/뉴스</a></span></li>
+<li><b>함의 2 (하방):</b> 지수가 반년 만에 90% 오른 구간은 <b>역사적 과열</b>이며, 작은 악재에도 6% 급락이 나오는 <b>고변동성 장세</b>입니다. → 본 포트폴리오는 <b>추격매수 금지·분할매수·기계적 손절</b>을 기본 원칙으로 합니다.</li>
+</ul>
+</div>
+
+<!-- ============ STEP 1 ============ -->
+<h2>Step 1 · 6개 테마 광역 스캔 (최근 1개월 후보 풀)</h2>
+<p class="sub">목적은 압축이 아니라 후보 확보. 각 종목의 뉴스 성격을 <span class="tag t-fund">펀더멘털</span> <span class="tag t-hype">화제성</span> <span class="tag t-pre">선반영</span>으로 표기.</p>
+
+<table>
+<thead><tr><th>테마</th><th>1차 후보</th><th>최근 1개월 핵심 모멘텀</th><th>성격</th></tr></thead>
+<tbody>
+<tr><td rowspan="2"><b>AI 반도체</b></td>
+<td>SK하이닉스<br><span class="src">000660</span></td>
+<td>HBM 슈퍼사이클·신고가 행진. 5/31 "삼전닉스가 이끈 전인미답 국장". HBM 공급부족 2028년까지 지속 전망. <span class="src"><a href="https://www.mt.co.kr/stock/2026/05/31/2026053112582743859">머니투데이</a>, <a href="https://www.tradingkey.com/kr/analysis/stocks/more/261879259-sk-hynix-hbm-shortage-samsung-tracker-valuation-tradingkey">TradingKey</a></span></td>
+<td><span class="tag t-fund">펀더멘털</span></td></tr>
+<tr>
+<td>한미반도체<br><span class="src">042700</span></td>
+<td>HBM TC본더 시장 71% 점유. 2026 HBM4 장비 발주 본격화. 단, 국내 증권사 목표가(18~24만)가 현주가(~37.5만) 하회 = 과열 신호. <span class="src"><a href="https://somsap.somsap.com/2026/05/01/%ED%95%9C%EB%AF%B8%EB%B0%98%EB%8F%84%EC%B2%B4-hbm-tc%EB%B3%B8%EB%8D%94-%EC%8B%9C%EC%9E%A5-%EC%A0%90%EC%9C%A0%EC%9C%A8-2026/">somsap</a>, <a href="https://economic22.com/hanmi-semiconductor-stock-price-2026/">economic22</a></span></td>
+<td><span class="tag t-fund">펀더멘털</span> <span class="tag t-pre">선반영</span></td></tr>
+
+<tr><td rowspan="2"><b>바이오 신약</b></td>
+<td>알테오젠<br><span class="src">196170</span></td>
+<td><b>5/12 美 PTAB, 할로자임 '600 특허 무효 확정</b> → 로열티·특허 우려 해소, ALT-B4 2043년까지 보호. 코스닥 시총 1위 등극. <span class="src"><a href="https://www.mt.co.kr/stock/2026/05/14/2026051409200627763">머니투데이</a>, <a href="https://pharm.edaily.co.kr/news/read?newsId=03998326645448592">이데일리</a></span></td>
+<td><span class="tag t-fund">펀더멘털</span></td></tr>
+<tr>
+<td>유한양행<br><span class="src">000100</span></td>
+<td>하반기 렉라자(레이저티닙) 매출 증가 기대. 모멘텀 강도는 알테오젠 대비 약함. <span class="src"><a href="https://www.eugenefn.com/common/files/amail/20260202_B3510_hskwon_319.pdf">유진투자증권</a></span></td>
+<td><span class="tag t-fund">펀더멘털</span></td></tr>
+
+<tr><td rowspan="3"><b>방산</b></td>
+<td>한화에어로스페이스<br><span class="src">012450</span></td>
+<td>2025 연간 영업익 <b>3조345억(사상 최대)</b>. 2026 기대수주 23.3조, 사우디 최대 20조 패키지 추진. 단 4월 ~146만→5월 ~124만 조정 중. <span class="src"><a href="https://files-scs.pstatic.net/2026/03/03/CaiNXtCCP0/%ED%95%9C%ED%99%94%EC%97%90%EC%96%B4%EB%A1%9C%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%2025%EB%85%84_4%EB%B6%84%EA%B8%B0.pdf">실적자료</a>, <a href="https://www.etoday.co.kr/news/view/2570267">이투데이</a></span></td>
+<td><span class="tag t-fund">펀더멘털</span></td></tr>
+<tr>
+<td>현대로템<br><span class="src">064350</span></td>
+<td>폴란드 K2 2차 65억달러(8.7조) + 현지생산. 2026 영업익 1조+ 전망. <span class="src"><a href="https://www.etoday.co.kr/news/view/2580200">이투데이</a>, <a href="https://www.dealbada.com/bbs/board.php?bo_table=forum_study&wr_id=495943">리포트요약</a></span></td>
+<td><span class="tag t-fund">펀더멘털</span></td></tr>
+<tr>
+<td>LIG넥스원(LIG D&A)<br><span class="src">079550</span></td>
+<td>수주잔고 26.2조(약 6년치). 천궁-II 중동 잔고 10.2조. 목표가 110만. <span class="src"><a href="https://parkdaeri.com/lig%EB%84%A5%EC%8A%A4%EC%9B%90-%EC%A3%BC%EA%B0%80-%EC%A0%84%EB%A7%9D-23%EC%A1%B0-%EC%88%98%EC%A3%BC-%EC%9E%94%EA%B3%A0%EA%B0%80-%EA%B0%80%EC%A0%B8%EC%98%AC-2026%EB%85%84-%EC%97%AD%EB%8C%80%EA%B8%89/">parkdaeri</a>, <a href="https://eureka.hankyung.com/insight/detail/16750">한경</a></span></td>
+<td><span class="tag t-fund">펀더멘털</span></td></tr>
+
+<tr><td><b>우주항공</b></td>
+<td>한국항공우주(KAI)<br><span class="src">047810</span></td>
+<td>FA-50 이집트(최대 100대)·UAE 헬기 협상. 2026 실적 '퀀텀점프'의 시작. 목표가 12~15.5만. 25년 저점 대비 반등했으나 모멘텀 강도 중간. <span class="src"><a href="https://eureka.hankyung.com/insight/detail/15794">한경</a>, <a href="https://alphabiz.co.kr/news/view/1065569905025645">알파비즈</a></span></td>
+<td><span class="tag t-fund">펀더멘털</span> <span class="tag t-hype">화제성</span></td></tr>
+
+<tr><td><b>밸류업</b></td>
+<td>KB금융<br><span class="src">105560</span></td>
+<td>2026 1차 주주환원 2.82조, 자사주 2.3조 소각, 배당성향 27%. PBR 0.8배 회복. 시장 전체 주주환원 92조 돌파. <span class="src"><a href="https://news.nate.com/view/20260512n06554">네이트</a>, <a href="https://www.fnnews.com/news/202605271152562236">파이낸셜뉴스</a></span></td>
+<td><span class="tag t-fund">펀더멘털</span></td></tr>
+
+<tr><td><b>그 외 강세<br>(AI 전력·원전)</b></td>
+<td>두산에너빌리티<br><span class="src">034020</span></td>
+<td>AI 데이터센터 전력수요 → 가스터빈 美 빅테크 1.2조 수주, 누적 12기. 창원 SMR 전용공장(연 20기+). 2026 영업익 1.2조(+58.7%) 전망. 5월 ~127만→105.5만 조정. <span class="src"><a href="https://www.thedailymoney.com/news/articleView.html?idxno=1137167">데일리머니</a>, <a href="https://news.nate.com/view/20260527n05364">네이트</a></span></td>
+<td><span class="tag t-fund">펀더멘털</span></td></tr>
+</tbody>
+</table>
+
+<!-- ============ STEP 2 ============ -->
+<h2>Step 2 · 모멘텀 정밀 스크리닝 (가중 점수화)</h2>
+<p class="sub">각 항목 0~5점. 모멘텀 우선 성향 반영: 뉴스·기술적·수급 ×1.5, 실적·밸류 ×1.0 (만점 32.5). <b>재무 안전성 필터</b>(적자지속·부채과다·현금흐름 악화) 통과 종목만 평가.</p>
+
+<table>
+<thead><tr><th>종목</th><th>뉴스 ×1.5</th><th>기술적 ×1.5</th><th>수급 ×1.5</th><th>실적 ×1.0</th><th>밸류 ×1.0</th><th>가중 합계</th><th>과열/주의</th></tr></thead>
+<tbody>
+<tr><td><b>SK하이닉스</b></td><td>5</td><td>5</td><td>4</td><td>5</td><td>3</td><td class="big pos"><b>29.0</b></td><td>신고가권 — 분할진입</td></tr>
+<tr><td><b>알테오젠</b></td><td>5</td><td>5</td><td>5</td><td>4</td><td>2</td><td class="big pos"><b>28.5</b></td><td>고PER·항소 잔여리스크</td></tr>
+<tr><td><b>KB금융</b></td><td>3</td><td>4</td><td>4</td><td>4</td><td>5</td><td class="big"><b>25.5</b></td><td>저변동 — 안전판</td></tr>
+<tr><td>한미반도체</td><td>4</td><td>4</td><td>4</td><td>4</td><td>2</td><td class="big"><b>24.0</b></td><td><span class="neg">국내 목표가 &lt; 현주가 = 추격위험</span></td></tr>
+<tr><td>현대로템</td><td>4</td><td>4</td><td>3</td><td>4</td><td>3</td><td class="big"><b>23.5</b></td><td>—</td></tr>
+<tr><td><b>한화에어로스페이스</b></td><td>4</td><td>3</td><td>3</td><td>5</td><td>3</td><td class="big"><b>23.0</b></td><td>조정/횡보 — 돌파확인 후</td></tr>
+<tr><td><b>두산에너빌리티</b></td><td>4</td><td>3</td><td>3</td><td>4</td><td>3</td><td class="big"><b>22.0</b></td><td>조정 중 — 눌림목</td></tr>
+<tr><td>LIG넥스원</td><td>4</td><td>3</td><td>3</td><td>4</td><td>3</td><td class="big"><b>22.0</b></td><td>—</td></tr>
+<tr><td>한국항공우주(KAI)</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td class="big"><b>19.5</b></td><td>모멘텀 중간</td></tr>
+<tr><td>유한양행</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td class="big"><b>19.5</b></td><td>모멘텀 중간</td></tr>
+</tbody>
+</table>
+<p class="sub"><b>선정 논리:</b> 점수 상위인 한미반도체(24.0)·현대로템(23.5)은 <b>벤치(대기)</b>로 둡니다. 이유 — ① 한미반도체는 SK하이닉스와 <b>반도체 쏠림</b>을 키우고 국내 목표가가 현주가를 하회(과열), ② 현대로템은 한화에어로와 <b>방산 중복</b>. 최종 5종목은 점수 + <b>테마 분산 + 하방 통제</b>를 함께 적용해 각 테마 대표주 위주로 압축했습니다.</p>
+
+<div class="card warn"><b>모멘텀 함정 점검:</b> 시장 전체가 +90% 급등 후 조정 국면이므로 <b>전 종목이 추격 위험 구간</b>에 가깝습니다. 따라서 모든 종목에 <b>분할매수 + 눌림목/돌파 확인</b>을 적용하고, <span class="neg">한미반도체(국내 목표가 하회)</span>는 진입 보류 권고합니다.</div>
+
+<!-- ============ STEP 3 ============ -->
+<h2>Step 3 · 버핏 특별 체크 (압축 후보 대상)</h2>
+<table>
+<thead><tr><th>종목</th><th>비즈니스 한 줄</th><th>경제적 해자</th><th>주주환원 시그널</th><th>경영진 신뢰</th><th>10년 보유?</th></tr></thead>
+<tbody>
+<tr><td><b>SK하이닉스</b></td><td>AI 서버용 HBM 메모리 1위 공급사</td><td><b>Wide</b> (HBM 기술·CAPA 과점)</td><td>이익 급증분 배당확대 여지</td><td>상</td><td>가능(메모리 사이클 변동성 감내 시)</td></tr>
+<tr><td><b>한화에어로</b></td><td>K-방산 수출 1위 (자주포·장갑차·엔진)</td><td><b>Wide</b> (가성비·납기 + 정부신뢰)</td><td>중 (성장 재투자 우선)</td><td>상</td><td>가능 (지정학 구조적 수혜)</td></tr>
+<tr><td><b>알테오젠</b></td><td>정맥주사를 피하주사로 바꾸는 SC 제형 플랫폼(ALT-B4) 라이선싱</td><td><b>Narrow→Wide</b> (특허 2043, 머크/바이오젠 레퍼런스)</td><td>약 (성장주, 배당 미미)</td><td>중</td><td>조건부 (추가 기술이전 지속 시)</td></tr>
+<tr><td><b>두산에너빌리티</b></td><td>대형원전·SMR·가스터빈 주기기 제조</td><td><b>Narrow</b> (SMR 독점 CAPA, 진입장벽)</td><td>중 (구조조정 후 회복기)</td><td>중</td><td>조건부 (전력수요 슈퍼사이클 전제)</td></tr>
+<tr><td><b>KB금융</b></td><td>국내 1위 금융지주 (은행·증권·보험)</td><td><b>Narrow</b> (예금기반·규모)</td><td><b>상</b> (소각·배당 적극, 환원율 27%+)</td><td>상</td><td><b>가능</b> (안정 배당주)</td></tr>
+</tbody>
+</table>
+
+<!-- ============ STEP 4 ============ -->
+<h2>Step 4 · 리스크–리워드 + 모멘텀 타이밍</h2>
+<p class="sub">현재가는 2026-05-29 전후 종가 기준 <b>추정치</b>(매체별 편차 존재, 매매 전 재확인 필수). 목표가는 증권사 컨센서스+시나리오 가중. 손절은 <b>기계적·엄격</b> 적용.</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>① SK하이닉스 (000660)</h3>
+현재가 ≈ <b class="num">2,290,000원</b> <span class="src">(5/29 전후, <a href="https://www.topstarnews.net/news/articleView.html?idxno=16074585">톱스타뉴스</a>)</span><br>
+<table>
+<tr><th>시나리오</th><th>가격</th><th>확률</th></tr>
+<tr><td class="pos">Bull</td><td>3,000,000 (+30%)</td><td>25%</td></tr>
+<tr><td>Base</td><td>2,800,000 (+22%)</td><td>50%</td></tr>
+<tr><td class="neg">Bear</td><td>1,850,000 (-19%)</td><td>25%</td></tr>
+</table>
+목표가 컨센서스: SK증권 <b>300만</b>, LS증권 210만 <span class="src">(<a href="https://msale.mimint.co.kr/bbs/view/news/S1N11/5387623">mimint</a>, <a href="https://news.bizwatch.co.kr/article/market/2026/05/11/0003">비즈워치</a>)</span><br>
+<b>손익비 ≈ 2.3</b> (눌림목 진입 시) · 손절 -15%(≈1,950,000)<br>
+<b class="pos">리버모어 트리거</b> — 진입: 거래량 동반 240만 전고점 <b>돌파 시 추가</b> 또는 205~220만 눌림목 분할. 청산: <b>20일선 종가 이탈</b> + HBM 가격피크 신호.
+</div>
+
+<div class="card">
+<h3>② 알테오젠 (196170)</h3>
+현재가 ≈ <b class="num">371,000원</b> <span class="src">(5/15, <a href="https://www.minsimnews.com/news/articleView.html?idxno=48742">민심뉴스</a>)</span><br>
+<table>
+<tr><th>시나리오</th><th>가격</th><th>확률</th></tr>
+<tr><td class="pos">Bull</td><td>580,000 (+56%)</td><td>25%</td></tr>
+<tr><td>Base</td><td>500,000 (+35%)</td><td>45%</td></tr>
+<tr><td class="neg">Bear</td><td>275,000 (-26%)</td><td>30%</td></tr>
+</table>
+목표가: 신한 <b>62만</b>, 미래에셋 60만 <span class="src">(<a href="https://www.edaily.co.kr/News/Read?newsId=02925766645448920&mediaCodeNo=257">이데일리</a>)</span><br>
+<b>손익비 ≈ 2.2</b> · 손절 -18%(≈305,000)<br>
+<b class="amber">잔여 리스크</b>: 할로자임 <b>항소</b> 가능성, 고PER. <b class="pos">트리거</b> — 진입: 34~37만 분할, 추가 기술이전 공시 시 비중확대. 청산: 추가 기술수출 모멘텀 소멸 또는 항소 인용.
+</div>
+
+<div class="card">
+<h3>③ 한화에어로스페이스 (012450)</h3>
+현재가 ≈ <b class="num">1,244,000원</b> <span class="src">(5/29 전후, <a href="https://www.investing.com/equities/samsung-techwin">Investing</a>)</span><br>
+<table>
+<tr><th>시나리오</th><th>가격</th><th>확률</th></tr>
+<tr><td class="pos">Bull</td><td>1,680,000 (+35%)</td><td>25%</td></tr>
+<tr><td>Base</td><td>1,470,000 (+18%)</td><td>50%</td></tr>
+<tr><td class="neg">Bear</td><td>1,045,000 (-16%)</td><td>25%</td></tr>
+</table>
+근거: 사상최대 영업익 3조 + 사우디 20조 패키지 <span class="src">(<a href="https://www.etoday.co.kr/news/view/2570267">이투데이</a>)</span>. 개별 목표가는 <b>데이터 부족</b>(매체 미확인) → 시나리오는 잔고·실적 기반 추정.<br>
+<b>손익비 ≈ 2.0</b> · 손절 -13%(≈1,080,000)<br>
+<b class="pos">트리거</b> — 진입: 130만 돌파 확인 후 또는 115~125만 분할. 청산: 사우디 계약 무산 뉴스 + 추세선 이탈.
+</div>
+
+<div class="card">
+<h3>④ 두산에너빌리티 (034020)</h3>
+현재가 ≈ <b class="num">105,500원</b> <span class="src">(5/29, <a href="https://www.joongangenews.com/news/articleView.html?idxno=522434">중앙이코노미</a>)</span><br>
+<table>
+<tr><th>시나리오</th><th>가격</th><th>확률</th></tr>
+<tr><td class="pos">Bull</td><td>142,000 (+35%)</td><td>25%</td></tr>
+<tr><td>Base</td><td>122,000 (+16%)</td><td>50%</td></tr>
+<tr><td class="neg">Bear</td><td>88,000 (-17%)</td><td>25%</td></tr>
+</table>
+근거: 가스터빈·SMR·대형원전 3축, 2026 영업익 1.2조(+58.7%) <span class="src">(<a href="https://news.nate.com/view/20260527n05364">네이트/신한</a>)</span><br>
+<b>손익비 ≈ 1.7</b> · 손절 -14%(≈90,700)<br>
+<b class="pos">트리거</b> — 진입: 98~108만(원) 눌림목 분할, 12.7만 전고 돌파 시 추가. 청산: 추가 수주 공백 + 20일선 이탈.
+</div>
+
+</div>
+
+<div class="card">
+<h3>⑤ KB금융 (105560) — 하방 통제 앵커</h3>
+현재가 ≈ <b class="num">150,600원</b> <span class="src">(5/29, <a href="https://news.nate.com/view/20260512n06554">네이트</a>)</span> · 저베타 · 배당 쿠션
+<table style="max-width:520px">
+<tr><th>시나리오</th><th>가격</th><th>확률</th></tr>
+<tr><td class="pos">Bull</td><td>190,000 (+26%)</td><td>30%</td></tr>
+<tr><td>Base</td><td>172,000 (+14%)</td><td>50%</td></tr>
+<tr><td class="neg">Bear</td><td>132,000 (-12%)</td><td>20%</td></tr>
+</table>
+근거: 환원율 27%+, 자사주 2.3조 소각, PBR 0.8배 <span class="src">(<a href="https://m.thebell.co.kr/m/newsview.asp?newskey=202602061444256560109273">더벨</a>, <a href="https://www.fnnews.com/news/202605271152562236">파이낸셜뉴스</a>)</span> · <b>손익비 ≈ 2.0</b> + 배당수익 ~2%(6개월) · 손절 -10%(≈135,500, 타이트)<br>
+<b class="pos">트리거</b> — 진입: 145~152만(원) 분할, 신고가 갱신 시 보유. 청산: 환원정책 후퇴 시그널 + 추세 이탈.
+</div>
+
+<!-- ============ STEP 5 ============ -->
+<h2>Step 5 · 최종 추천 — 5종목 집중 포트폴리오</h2>
+
+<table>
+<thead><tr><th>종목 (테마)</th><th>비중</th><th>분할매수 가격대</th><th>손절선(기계적)</th><th>6M Base 기대</th><th>역할</th></tr></thead>
+<tbody>
+<tr><td><b>SK하이닉스</b><br>(AI반도체)</td><td><b>25%</b></td><td>205~220만 분할 / 240만 돌파 추가</td><td class="neg">1,950,000 (-15%)</td><td class="pos">+22%</td><td>모멘텀 핵심</td></tr>
+<tr><td><b>한화에어로</b><br>(방산)</td><td><b>20%</b></td><td>115~125만 / 130만 돌파 추가</td><td class="neg">1,080,000 (-13%)</td><td class="pos">+18%</td><td>실적 대형주</td></tr>
+<tr><td><b>알테오젠</b><br>(바이오)</td><td><b>15%</b></td><td>340~370 분할</td><td class="neg">305,000 (-18%)</td><td class="pos">+35%</td><td>고탄력·이벤트</td></tr>
+<tr><td><b>두산에너빌리티</b><br>(AI전력/원전)</td><td><b>15%</b></td><td>98~108만(원) 분할</td><td class="neg">90,700 (-14%)</td><td class="pos">+16%</td><td>섹터 분산</td></tr>
+<tr><td><b>KB금융</b><br>(밸류업)</td><td><b>15%</b></td><td>145~152만(원) 분할</td><td class="neg">135,500 (-10%)</td><td class="pos">+14%</td><td>하방 앵커</td></tr>
+<tr style="background:#11161b"><td><b>현금 (Dry Powder)</b></td><td><b>10%</b></td><td colspan="2">고변동 장세 대응 — 급락 시 우량주 추가매수 재원</td><td>0%</td><td>변동성 완충</td></tr>
+</tbody>
+</table>
+
+<div class="grid">
+<div class="card">
+<h3>📈 6개월 기대수익률 (시나리오 가중)</h3>
+종목별 기대수익 × 비중 합산:<br>
+<table style="font-size:13px">
+<tr><td>SK하이닉스</td><td>+12.0% ×0.25 = +3.0%p</td></tr>
+<tr><td>알테오젠</td><td>+18% ×0.15 = +2.7%p</td></tr>
+<tr><td>한화에어로</td><td>+13.8% ×0.20 = +2.8%p</td></tr>
+<tr><td>두산에너빌리티</td><td>+11% ×0.15 = +1.7%p</td></tr>
+<tr><td>KB금융</td><td>+10% ×0.15 = +1.5%p</td></tr>
+<tr><th>포트폴리오 기대</th><th class="pos">≈ +11~12%</th></tr>
+</table>
+<span class="src">※ Base/Bull/Bear 확률가중 추정치이며 보장 수익이 아님.</span>
+</div>
+<div class="card">
+<h3>📉 최대 손실 가능액 (손절 동시 발동 가정)</h3>
+전 종목이 손절선까지 동시 하락 시(투자분 90%):<br>
+가중 손절폭 ≈ <b class="neg">-12~13%</b> (현금 10%가 완충)<br><br>
+예) 1,000만원 투자 → <b class="neg">약 -120만~130만원</b> 손실에서 기계적 청산.<br>
+<span class="src">⚠️ 갭하락·유동성 급변 시 실제 손실은 손절선을 <b>초과</b>할 수 있음. 지수 90% 급등 후 구간이라 꼬리위험 상존.</span>
+</div>
+</div>
+
+<div class="card">
+<h3>🧭 테마·섹터 쏠림 점검</h3>
+<ul>
+<li><b>테마 분산 양호:</b> 반도체·방산·바이오·전력/원전·금융 — 5개 상이 테마. 단일 테마 최대 25%.</li>
+<li><b>경기 민감도 균형:</b> 고베타(반도체·바이오·전력) 55% vs 저베타·배당(KB금융)+현금 25%.</li>
+<li><b>상관 주의:</b> SK하이닉스·두산은 'AI 인프라' 공통 테마 → AI 투자 둔화 시 동반 하락 가능. 합산 40% 노출 모니터링.</li>
+<li><b>대안(벤치):</b> 모멘텀 극대화 선호 시 두산↔<b>한미반도체</b> 교체 가능하나, 반도체 비중이 40%로 상승 → 쏠림 확대 유의. 방산 강화 선호 시 <b>현대로템</b> 추가.</li>
+</ul>
+</div>
+
+<div class="card warn">
+<h3>🚫 가설 무효화 조건 3 (하나라도 발생 시 포트폴리오 재점검·비중축소)</h3>
+<ol>
+<li><b>지수 추세 붕괴:</b> 코스피가 <b>7,000선 종가 이탈</b> + 외국인 5거래일 연속 순매도 → 강세장 가설 무효, 현금비중 확대.</li>
+<li><b>HBM 사이클 정점 신호:</b> HBM 고정가 하락 전환 또는 빅테크 AI CAPEX 가이던스 하향 → SK하이닉스·두산 비중 우선 축소.</li>
+<li><b>개별 펀더멘털 훼손:</b> ① 한화에어로 사우디 패키지 무산, ② 알테오젠 할로자임 항소 인용, ③ KB금융 주주환원 후퇴 — 해당 종목 즉시 청산.</li>
+</ol>
+</div>
+
+<!-- ============ 한 줄 결론 ============ -->
+<h2>📝 종목별 한 줄 결론</h2>
+<table>
+<thead><tr><th>종목</th><th>판단</th><th>핵심 근거 한 문장</th></tr></thead>
+<tbody>
+<tr><td><b>SK하이닉스</b></td><td class="buy">매수(분할)</td><td>HBM 슈퍼사이클 + 신고가 재가속으로 모멘텀·실적 모두 최상위 — 다만 신고가권이므로 눌림목 분할로 접근.</td></tr>
+<tr><td><b>한화에어로스페이스</b></td><td class="hold">보유/조정 매수</td><td>사상 최대 실적과 20조 수주 파이프라인은 견고하나 단기 조정 중 — 130만 돌파 확인 또는 눌림목에서 분할.</td></tr>
+<tr><td><b>알테오젠</b></td><td class="buy">매수(소량·고탄력)</td><td>특허 리스크 해소로 재도약 발판 마련, 추가 기술이전 모멘텀 유효 — 변동성 큰 만큼 비중은 작게.</td></tr>
+<tr><td><b>두산에너빌리티</b></td><td class="hold">분할 매수</td><td>AI 전력수요·SMR·가스터빈 구조적 성장 + 조정으로 진입 매력 개선 — 눌림목 분할 적정.</td></tr>
+<tr><td><b>KB금융</b></td><td class="buy">매수(앵커)</td><td>적극적 주주환원과 저PBR로 하방을 받쳐주는 포트폴리오 안정판 — 변동성 장세의 균형추.</td></tr>
+<tr><td style="color:var(--mut)">한미반도체</td><td class="watch">관망(보류)</td><td>HBM 본더 1위로 펀더멘털은 우수하나 국내 목표가가 현주가를 하회 — 추격 위험, 조정 후 재검토.</td></tr>
+</tbody>
+</table>
+
+<div class="card disc" style="margin-top:30px">
+<b>⚠️ 투자 유의 (말미 재고지)</b><br>
+본 보고서의 모든 수치·목표가·확률·기대수익률은 <b>공개 검색 자료 기반 추정</b>이며 미래 수익을 보장하지 않습니다. 일부 실시간 시세·수급·재무 항목은 매체별 편차가 있거나 '데이터 부족'으로 표기되었으니 <b>반드시 증권사 정식 자료로 재확인</b>하십시오. 모멘텀 전략 특성상 <b>손절은 예외 없이 기계적으로</b> 집행해야 하며, 현재는 지수가 반년 만에 +90% 급등 후 고변동성에 진입한 <b>이례적 과열 국면</b>임을 거듭 강조합니다. <b>최종 투자 판단과 그 결과에 대한 책임은 전적으로 투자자 본인에게 있습니다.</b>
+</div>
+
+<div class="foot">
+주요 출처: 머니투데이·경향신문·Investing.com(시장)·SK증권/LS증권(반도체)·이투데이/한국경제(방산)·이데일리/약사공론(바이오)·데일리머니/신한투자증권(전력)·네이트/파이낸셜뉴스/더벨(밸류업). 각 수치 옆 링크 참조. · 작성: 2026-06-02 · 본 문서는 투자 참고용 분석 자료입니다.
+</div>
+
+</div>
+</body>
+</html>
