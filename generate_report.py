@@ -132,6 +132,11 @@ def call_groq(system_prompt, user_prompt, retries=3):
     headers = {
         "Authorization": f"Bearer {GROQ_API_KEY}",
         "Content-Type": "application/json",
+        # User-Agent가 없으면 Cloudflare가 봇으로 보고 차단(error 1010)함
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                      "AppleWebKit/537.36 (KHTML, like Gecko) "
+                      "Chrome/124.0 Safari/537.36",
+        "Accept": "application/json",
     }
     last_err = None
     for attempt in range(1, retries + 1):
